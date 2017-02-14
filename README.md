@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple messaging application that uses
 
-Things you may want to cover:
+### Setup
 
-* Ruby version
+```
+git clone git@github.com:tmikeschu/simple_messager.git
+cd simple_messenger
+bundle
+rake db:setup
+clear & rspec
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Running Locally
+```
+rails s
+open http://localhost:3000
+```
