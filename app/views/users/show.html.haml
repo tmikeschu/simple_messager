@@ -1,0 +1,15 @@
+%section.dashboard
+  %h1
+    = "Welcome, #{current_user.first_name.capitalize}!"
+
+  %article
+    %h3 Your Conversations
+    = link_to('New Conversation', new_conversation_path )
+
+  %ul
+    - current_user.conversations.each do |conversation|
+      %li
+        = link_to("Conversation: #{conversation.id}", conversation_path(conversation))
+        %p
+          = "Members: #{conversation.members.pluck(:first_name).join(", ")}"
+
