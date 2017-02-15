@@ -14,17 +14,18 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 100%;
+    width: 40%;
     li {
+      margin: 20px 0;
       display: inline-flex;
       flex-flow: row-wrap;
       justify-content: space-between;
-      width: 50%;
+      width: 100%;
       a {
-        width: 15%;
+        width: 30%;
       }
       p {
-        width: 85%;
+        width: 70%;
       }
     }
   }

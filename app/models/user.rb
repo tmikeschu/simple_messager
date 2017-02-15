@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates_presence_of :first_name, :email
   validates_uniqueness_of :email
 
-  has_many :conversations, dependent: :destroy
-  has_many :messages, through: :conversations
+  has_many :conversation_members
+  has_many :conversations, through: :conversation_members
+  has_many :messages
 end

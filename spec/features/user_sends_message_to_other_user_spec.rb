@@ -41,6 +41,7 @@ RSpec.describe do
       expect(page).to have_content "Hey!"
       expect(page).to have_content "Sent: #{@user1.messages.first.created_at}"
       expect(page).to have_content @user1.first_name
+      byebug
     end
   end
 end
