@@ -1,0 +1,13 @@
+%section.conversation
+  %article.messages
+    - @conversation.messages.each do |message|
+      %ul
+        = message.body
+        = "From: #{message.user.first_name}"
+        = "Sent: #{message.created_at}"
+
+  %article.new_message
+    = form_for [@conversation, @message] do |f|
+      = f.text_area :body
+      = f.hidden_field :user_id, value: current_user.id
+      = f.submit "Send"

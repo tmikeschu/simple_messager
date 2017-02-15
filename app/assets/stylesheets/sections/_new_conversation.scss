@@ -1,0 +1,18 @@
+.conversation-form {
+  margin: 20px;
+  form {
+    article {
+      margin: 20px 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      width: 10%;
+      label {
+        width: 50%;
+      }
+      input {
+        width: 50%;
+      }
+    }
+  }
+}

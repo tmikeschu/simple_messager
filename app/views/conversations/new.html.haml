@@ -1,0 +1,9 @@
+%section.conversation-form
+  %h3 Select Members
+
+  = form_for @conversation do |f|
+
+    %article
+      = f.collection_check_boxes(:members, @users, :id, :first_name)
+
+    = f.submit "Create Conversation"
