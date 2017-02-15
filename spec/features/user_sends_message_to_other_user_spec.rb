@@ -19,7 +19,9 @@ RSpec.describe do
       visit root_path
       fill_in "user[email]", with: @user1.email
       fill_in "user[password]", with: @user1.password
-      click_on "Log in"
+      within "form" do
+        click_on "Log in"
+      end
     end
 
     scenario "starts a message" do
@@ -41,7 +43,6 @@ RSpec.describe do
       expect(page).to have_content "Hey!"
       expect(page).to have_content "Sent: #{@user1.messages.first.created_at}"
       expect(page).to have_content @user1.first_name
-      byebug
     end
   end
 end

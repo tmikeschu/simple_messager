@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   context "associations" do
-    it { should have_many(:conversations) }
+    it { should have_many(:conversation_members) }
+    it { should have_many(:conversations).through(:conversation_members) }
+    it { should have_many(:messages) }
   end
 
   context "validations" do
