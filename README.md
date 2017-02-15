@@ -17,3 +17,14 @@ clear & rspec
 rails s
 open http://localhost:3000
 ```
+Sample user credentials:
+
+user@example.com
+
+password
+
+#### Sample conversation view
+![conversation view](conversation_show.png "Conversation view")
+
+#### Database Schema
+![db schema](db_schema.png "Database Schema")
